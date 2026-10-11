@@ -1,0 +1,1118 @@
+fileFormatVersion: 2
+guid: ce32427e9b56d054b965d465adb6a2f2
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4879484648244477478
+    second: Coloring-tools_0
+  - first:
+      213: -1219419272676644533
+    second: Coloring-tools_1
+  - first:
+      213: 7197316864247502586
+    second: Coloring-tools_2
+  - first:
+      213: 9198226052897527320
+    second: Coloring-tools_3
+  - first:
+      213: 2188715370555306765
+    second: Coloring-tools_4
+  - first:
+      213: 3334285736828085022
+    second: Coloring-tools_5
+  - first:
+      213: 5885718769009655580
+    second: Coloring-tools_6
+  - first:
+      213: 2765370057649757060
+    second: Coloring-tools_7
+  - first:
+      213: 3788943629441399588
+    second: Coloring-tools_8
+  - first:
+      213: -8170457357898874071
+    second: Coloring-tools_9
+  - first:
+      213: 6605712146887487015
+    second: Coloring-tools_10
+  - first:
+      213: -5108944815010287856
+    second: Coloring-tools_11
+  - first:
+      213: -1240115553696839249
+    second: Coloring-tools_12
+  - first:
+      213: -5078383012018626037
+    second: Coloring-tools_13
+  - first:
+      213: 2165904727291067493
+    second: Coloring-tools_14
+  - first:
+      213: 4827738600971512195
+    second: Coloring-tools_15
+  - first:
+      213: 1055669116070865046
+    second: Coloring-tools_16
+  - first:
+      213: -7737620825074274970
+    second: Coloring-tools_17
+  - first:
+      213: 7821293478287512821
+    second: Coloring-tools_18
+  - first:
+      213: -8254399158820209972
+    second: Coloring-tools_19
+  - first:
+      213: 8747077100420971234
+    second: Coloring-tools_20
+  - first:
+      213: 5477341762564225538
+    second: Coloring-tools_21
+  - first:
+      213: 2698367520895610599
+    second: Coloring-tools_22
+  - first:
+      213: 723562794272073414
+    second: Coloring-tools_23
+  - first:
+      213: -5922820647239823872
+    second: Coloring-tools_24
+  - first:
+      213: -8655279932306591165
+    second: Coloring-tools_25
+  - first:
+      213: -6993681718541127722
+    second: Coloring-tools_26
+  - first:
+      213: -2966771650236264223
+    second: Coloring-tools_27
+  - first:
+      213: -3802366850356497537
+    second: Coloring-tools_28
+  - first:
+      213: 6688746795482228734
+    second: Coloring-tools_29
+  - first:
+      213: 8853991645810897619
+    second: Coloring-tools_30
+  - first:
+      213: 8736541601843818072
+    second: Coloring-tools_31
+  - first:
+      213: -7628785063266329363
+    second: Coloring-tools_32
+  - first:
+      213: -3160546170194588252
+    second: Coloring-tools_33
+  - first:
+      213: 8763053624358866992
+    second: Coloring-tools_34
+  - first:
+      213: -6807355629703231062
+    second: Coloring-tools_35
+  - first:
+      213: 8124066640967183223
+    second: Coloring-tools_36
+  - first:
+      213: -2241622382423883233
+    second: Coloring-tools_37
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Coloring-tools_0
+      rect:
+        serializedVersion: 2
+        x: 1392
+        y: 740
+        width: 14
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62e75995f6967b340800000000000000
+      internalID: 4879484648244477478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coloring-tools_1
+      rect:
+        serializedVersion: 2
+        x: 1409
+        y: 757
+        width: 27
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b49e7dbd1a0c31fe0800000000000000
+      internalID: -1219419272676644533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coloring-tools_2
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 746
+        width: 28
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af696651e8102e360800000000000000
+      internalID: 7197316864247502586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coloring-tools_3
+      rect:
+        serializedVersion: 2
+        x: 1472
+        y: 744
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81653be5cd9a6af70800000000000000
+      internalID: 9198226052897527320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coloring-tools_4
+      rect:
+        serializedVersion: 2
+        x: 1531
+        y: 714
+        width: 197
+        height: 123
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d03f2608801ef5e10800000000000000
+      internalID: 2188715370555306765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coloring-tools_5
+      rect:
+        serializedVersion: 2
+        x: 1298
+        y: 725
+        width: 24
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e132a4b3633c54e20800000000000000
+      internalID: 3334285736828085022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coloring-tools_6
+      rect:
+        serializedVersion: 2
+        x: 1324
+        y: 703
+        width: 24
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1f7baa59064ea150800000000000000
+      internalID: 5885718769009655580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coloring-tools_7
+      rect:
+        serializedVersion: 2
+        x: 1385
+        y: 707
+        width: 14
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48b17b67a61906620800000000000000
+      internalID: 2765370057649757060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coloring-tools_8
+      rect:
+        serializedVersion: 2
+        x: 1197
+        y: 677
+        width: 17
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42b75d20828059430800000000000000
+      internalID: 3788943629441399588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coloring-tools_9
+      rect:
+        serializedVersion: 2
+        x: 1218
+        y: 677
+        width: 23
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92306f96254bc9e80800000000000000
+      internalID: -8170457357898874071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coloring-tools_10
+      rect:
+        serializedVersion: 2
+        x: 1292
+        y: 695
+        width: 13
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72e26b3f2343cab50800000000000000
+      internalID: 6605712146887487015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coloring-tools_11
+      rect:
+        serializedVersion: 2
+        x: 1350
+        y: 682
+        width: 23
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01fec3452c16919b0800000000000000
+      internalID: -5108944815010287856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coloring-tools_12
+      rect:
+        serializedVersion: 2
+        x: 1376
+        y: 676
+        width: 16
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa9867d69793acee0800000000000000
+      internalID: -1240115553696839249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coloring-tools_13
+      rect:
+        serializedVersion: 2
+        x: 1105
+        y: 656
+        width: 25
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0260479e85f589b0800000000000000
+      internalID: -5078383012018626037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coloring-tools_14
+      rect:
+        serializedVersion: 2
+        x: 1191
+        y: 644
+        width: 13
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56cf58fbfd6de0e10800000000000000
+      internalID: 2165904727291067493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coloring-tools_15
+      rect:
+        serializedVersion: 2
+        x: 1243
+        y: 655
+        width: 23
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 389295bdda29ff240800000000000000
+      internalID: 4827738600971512195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coloring-tools_16
+      rect:
+        serializedVersion: 2
+        x: 1285
+        y: 662
+        width: 14
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69821c7c77d76ae00800000000000000
+      internalID: 1055669116070865046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coloring-tools_17
+      rect:
+        serializedVersion: 2
+        x: 677
+        y: 626
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66d68c2fad27e9490800000000000000
+      internalID: -7737620825074274970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coloring-tools_18
+      rect:
+        serializedVersion: 2
+        x: 1096
+        y: 632
+        width: 13
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f41861caf0da8c60800000000000000
+      internalID: 7821293478287512821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coloring-tools_19
+      rect:
+        serializedVersion: 2
+        x: 1132
+        y: 634
+        width: 23
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ccafc30e2bb727d80800000000000000
+      internalID: -8254399158820209972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coloring-tools_20
+      rect:
+        serializedVersion: 2
+        x: 1268
+        y: 641
+        width: 24
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2eabb81674cd36970800000000000000
+      internalID: 8747077100420971234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coloring-tools_21
+      rect:
+        serializedVersion: 2
+        x: 466
+        y: 578
+        width: 51
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20a7d07105d630c40800000000000000
+      internalID: 5477341762564225538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coloring-tools_22
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 578
+        width: 44
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ee2f64b6f6827520800000000000000
+      internalID: 2698367520895610599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coloring-tools_23
+      rect:
+        serializedVersion: 2
+        x: 571
+        y: 578
+        width: 20
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c6a64d178c9a0a00800000000000000
+      internalID: 723562794272073414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coloring-tools_24
+      rect:
+        serializedVersion: 2
+        x: 593
+        y: 578
+        width: 45
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00ecbe4700aedcda0800000000000000
+      internalID: -5922820647239823872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coloring-tools_25
+      rect:
+        serializedVersion: 2
+        x: 645
+        y: 579
+        width: 29
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3427c4b52c442e780800000000000000
+      internalID: -8655279932306591165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coloring-tools_26
+      rect:
+        serializedVersion: 2
+        x: 678
+        y: 579
+        width: 13
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6df6636f78371fe90800000000000000
+      internalID: -6993681718541127722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coloring-tools_27
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 579
+        width: 41
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e0d7f917e8e3d6d0800000000000000
+      internalID: -2966771650236264223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coloring-tools_28
+      rect:
+        serializedVersion: 2
+        x: 745
+        y: 561
+        width: 44
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f73b7c2de774b3bc0800000000000000
+      internalID: -3802366850356497537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coloring-tools_29
+      rect:
+        serializedVersion: 2
+        x: 807
+        y: 579
+        width: 46
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef72041a5c333dc50800000000000000
+      internalID: 6688746795482228734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coloring-tools_30
+      rect:
+        serializedVersion: 2
+        x: 850
+        y: 578
+        width: 45
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d2b5dccd72bfda70800000000000000
+      internalID: 8853991645810897619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coloring-tools_31
+      rect:
+        serializedVersion: 2
+        x: 899
+        y: 578
+        width: 45
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85ea2577c4e6e3970800000000000000
+      internalID: 8736541601843818072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coloring-tools_32
+      rect:
+        serializedVersion: 2
+        x: 950
+        y: 578
+        width: 20
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dec543c676c112690800000000000000
+      internalID: -7628785063266329363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coloring-tools_33
+      rect:
+        serializedVersion: 2
+        x: 971
+        y: 578
+        width: 37
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ad8455e00c7324d0800000000000000
+      internalID: -3160546170194588252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coloring-tools_34
+      rect:
+        serializedVersion: 2
+        x: 1043
+        y: 601
+        width: 27
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0301c9bb7de9c9970800000000000000
+      internalID: 8763053624358866992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coloring-tools_35
+      rect:
+        serializedVersion: 2
+        x: 1074
+        y: 612
+        width: 27
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa988c72f1a6781a0800000000000000
+      internalID: -6807355629703231062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coloring-tools_36
+      rect:
+        serializedVersion: 2
+        x: 1157
+        y: 612
+        width: 23
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77b237a119b7eb070800000000000000
+      internalID: 8124066640967183223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coloring-tools_37
+      rect:
+        serializedVersion: 2
+        x: 1184
+        y: 611
+        width: 13
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f124f0fd15824e0e0800000000000000
+      internalID: -2241622382423883233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Coloring-tools_0: 4879484648244477478
+      Coloring-tools_1: -1219419272676644533
+      Coloring-tools_10: 6605712146887487015
+      Coloring-tools_11: -5108944815010287856
+      Coloring-tools_12: -1240115553696839249
+      Coloring-tools_13: -5078383012018626037
+      Coloring-tools_14: 2165904727291067493
+      Coloring-tools_15: 4827738600971512195
+      Coloring-tools_16: 1055669116070865046
+      Coloring-tools_17: -7737620825074274970
+      Coloring-tools_18: 7821293478287512821
+      Coloring-tools_19: -8254399158820209972
+      Coloring-tools_2: 7197316864247502586
+      Coloring-tools_20: 8747077100420971234
+      Coloring-tools_21: 5477341762564225538
+      Coloring-tools_22: 2698367520895610599
+      Coloring-tools_23: 723562794272073414
+      Coloring-tools_24: -5922820647239823872
+      Coloring-tools_25: -8655279932306591165
+      Coloring-tools_26: -6993681718541127722
+      Coloring-tools_27: -2966771650236264223
+      Coloring-tools_28: -3802366850356497537
+      Coloring-tools_29: 6688746795482228734
+      Coloring-tools_3: 9198226052897527320
+      Coloring-tools_30: 8853991645810897619
+      Coloring-tools_31: 8736541601843818072
+      Coloring-tools_32: -7628785063266329363
+      Coloring-tools_33: -3160546170194588252
+      Coloring-tools_34: 8763053624358866992
+      Coloring-tools_35: -6807355629703231062
+      Coloring-tools_36: 8124066640967183223
+      Coloring-tools_37: -2241622382423883233
+      Coloring-tools_4: 2188715370555306765
+      Coloring-tools_5: 3334285736828085022
+      Coloring-tools_6: 5885718769009655580
+      Coloring-tools_7: 2765370057649757060
+      Coloring-tools_8: 3788943629441399588
+      Coloring-tools_9: -8170457357898874071
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
