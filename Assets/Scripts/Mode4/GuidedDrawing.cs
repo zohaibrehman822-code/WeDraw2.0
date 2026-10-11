@@ -49,6 +49,11 @@ public class GuidedDrawing : MaskableGraphic, IPointerDownHandler, IDragHandler,
     bool dragging;
     bool completed;
 
+    // reused buffers and caches, so nothing is allocated while the child draws
+    float placedArc = -1f;
+    readonly List<Vector2> meshPts = new List<Vector2>();
+    readonly List<Transform> pointBuffer = new List<Transform>();
+
     // ---------- setup ----------
 
     protected override void OnEnable()
@@ -64,6 +69,7 @@ public class GuidedDrawing : MaskableGraphic, IPointerDownHandler, IDragHandler,
         BuildPath();
         progress = 0f;
         thumbArc = 0f;
+        placedArc = -1f;
         dragging = false;
         completed = false;
         PlaceThumb();
@@ -110,6 +116,7 @@ public class GuidedDrawing : MaskableGraphic, IPointerDownHandler, IDragHandler,
     {
         if (thumb == null || path.Count == 0) return;
         thumb.position = rectTransform.TransformPoint(PointAt(thumbArc) + thumbOffset);
+        placedArc = thumbArc;
     }
 
     void Update()
@@ -124,8 +131,11 @@ public class GuidedDrawing : MaskableGraphic, IPointerDownHandler, IDragHandler,
             : progress;
 
         if (thumbArc < progress) thumbArc = progress;
-        thumbArc = Mathf.MoveTowards(thumbArc, target, thumbSpeed * Time.deltaTime);
-        PlaceThumb();
+        if (thumbArc != target)
+            thumbArc = Mathf.MoveTowards(thumbArc, target, thumbSpeed * Time.deltaTime);
+
+        // Only touch the thumb's transform when it really moved (keeps the canvas calm).
+        if (thumbArc != placedArc) PlaceThumb();
     }
 
     bool ToLocal(PointerEventData e, out Vector2 p)
@@ -213,7 +223,9 @@ public class GuidedDrawing : MaskableGraphic, IPointerDownHandler, IDragHandler,
         if (path.Count < 2 || progress <= 0f) return;
 
         // path from first point up to current progress
-        var pts = new List<Vector2> { path[0] };
+        List<Vector2> pts = meshPts;
+        pts.Clear();
+        pts.Add(path[0]);
         for (int i = 1; i < path.Count; i++)
         {
             if (cum[i] <= progress) pts.Add(path[i]);
@@ -242,7 +254,7 @@ public class GuidedDrawing : MaskableGraphic, IPointerDownHandler, IDragHandler,
         }
 
         // round joints and caps
-        const int seg = 14;
+        const int seg = 10;
         foreach (Vector2 pt in pts)
         {
             int center = vh.currentVertCount;
@@ -280,14 +292,15 @@ public class GuidedDrawing : MaskableGraphic, IPointerDownHandler, IDragHandler,
     // Uses the dragged-in array if it has items, otherwise the children of Points Parent.
     List<Transform> GetPointTransforms()
     {
-        var list = new List<Transform>();
+        List<Transform> list = pointBuffer;
+        list.Clear();
         if (points != null && points.Length > 0)
         {
             list.AddRange(points);
         }
         else if (pointsParent != null)
         {
-            foreach (Transform t in pointsParent) list.Add(t);
+            for (int i = 0; i < pointsParent.childCount; i++) list.Add(pointsParent.GetChild(i));
         }
         return list;
     }
