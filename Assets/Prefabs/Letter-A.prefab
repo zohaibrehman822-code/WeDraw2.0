@@ -164,7 +164,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: ff9142afe079dcf42ab34630878b94ac, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -267,6 +267,7 @@ MonoBehaviour:
   growDuration: 1
   startScale: 0.1
   mover: {fileID: 6675661890993013311}
+  audioSource: {fileID: 310895727392779420}
 --- !u!1 &1196403067083419064
 GameObject:
   m_ObjectHideFlags: 0
@@ -792,6 +793,17 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
+  kidsGuideStyle: 1
+  guideColor: {r: 0.28, g: 0.72, b: 1, a: 0.55}
+  wrongTouchColor: {r: 1, g: 0.3, b: 0.28, a: 0.8}
+  startDotColor: {r: 0.25, g: 0.9, b: 0.35, a: 1}
+  finishDotColor: {r: 1, g: 0.78, b: 0.12, a: 1}
+  guideDotRadius: 7
+  guideDotSpacing: 26
+  completionThreshold: 0.97
+  wrongTouchFlashDuration: 0.3
+  thumbPulseAmount: 0.1
+  thumbPulseSpeed: 4
   points:
   - {fileID: 3710254992576182317}
   - {fileID: 4431129567437115727}

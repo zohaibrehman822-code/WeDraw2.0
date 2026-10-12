@@ -32,12 +32,21 @@ public class DrawingReward : MonoBehaviour
     [Tooltip("Left empty, it is found on this object automatically.")]
     [SerializeField] MoveOnComplete mover;
 
-    AudioSource audioSource;
+    [Header("Audio")]
+    [Tooltip("AudioSource that contains this letter's pronunciation clip. Defaults to the prefab root AudioSource.")]
+    [SerializeField] AudioSource audioSource;
     Coroutine routine;
 
     void Awake()
     {
-        audioSource = GetComponent<AudioSource>();
+        if (audioSource == null)
+        {
+            if (mover == null) mover = GetComponentInParent<MoveOnComplete>();
+            if (mover != null) audioSource = mover.GetComponent<AudioSource>();
+        }
+        if (audioSource == null)
+            audioSource = GetComponent<AudioSource>();
+
         audioSource.playOnAwake = false;
         audioSource.loop = false;
         audioSource.spatialBlend = 0f;
@@ -123,11 +132,17 @@ public class DrawingReward : MonoBehaviour
 
     void PlaySound()
     {
-        if (audioSource == null || rewardSound == null) return;
+        if (audioSource == null) return;
+
+        // Existing letter prefabs already carry their pronunciation clip on the
+        // AudioSource. Use it as a safe fallback when Reward Sound is unassigned.
+        AudioClip clip = rewardSound != null ? rewardSound : audioSource.clip;
+        if (clip == null) return;
+
         audioSource.Stop();
-        audioSource.clip = rewardSound;
+        audioSource.clip = clip;
         audioSource.Play();
-        Debug.Log("Reward Sound Play Function Called");
+        Debug.Log($"{clip.name} sound player", this);
     }
 
     // Grows a little past full size and settles back: a soft "pop".

@@ -22,6 +22,20 @@ public class GuidedDrawing : MaskableGraphic, IPointerDownHandler, IDragHandler,
     [SerializeField] Color lineColor = Color.red;
     [SerializeField, Min(1f)] float thickness = 24f;
 
+    [Header("Kids Guide Style")]
+    [Tooltip("Shows a friendly dotted path, start/finish targets and touch feedback.")]
+    [SerializeField] bool kidsGuideStyle;
+    [SerializeField] Color guideColor = new Color(0.28f, 0.72f, 1f, 0.55f);
+    [SerializeField] Color wrongTouchColor = new Color(1f, 0.3f, 0.28f, 0.8f);
+    [SerializeField] Color startDotColor = new Color(0.25f, 0.9f, 0.35f, 1f);
+    [SerializeField] Color finishDotColor = new Color(1f, 0.78f, 0.12f, 1f);
+    [SerializeField, Min(4f)] float guideDotRadius = 7f;
+    [SerializeField, Min(8f)] float guideDotSpacing = 26f;
+    [SerializeField, Range(0.85f, 1f)] float completionThreshold = 0.97f;
+    [SerializeField, Min(0f)] float wrongTouchFlashDuration = 0.3f;
+    [SerializeField, Min(0f)] float thumbPulseAmount = 0.1f;
+    [SerializeField, Min(0f)] float thumbPulseSpeed = 4f;
+
     [Header("Rules (canvas units)")]
     [Tooltip("How far the finger may stray from the path before ink stops.")]
     [SerializeField, Min(1f)] float tolerance = 50f;
@@ -48,6 +62,8 @@ public class GuidedDrawing : MaskableGraphic, IPointerDownHandler, IDragHandler,
     float thumbArc;      // where the thumb is (ahead of progress while drawing)
     bool dragging;
     bool completed;
+    float wrongTouchUntil;
+    Vector3 thumbBaseScale = Vector3.one;
 
     // reused buffers and caches, so nothing is allocated while the child draws
     float placedArc = -1f;
@@ -59,7 +75,15 @@ public class GuidedDrawing : MaskableGraphic, IPointerDownHandler, IDragHandler,
     protected override void OnEnable()
     {
         base.OnEnable();
+        if (thumb != null) thumbBaseScale = thumb.localScale;
         ResetDrawing();
+    }
+
+    protected override void OnDisable()
+    {
+        CancelInvoke(nameof(ClearWrongTouchFeedback));
+        if (thumb != null) thumb.localScale = thumbBaseScale;
+        base.OnDisable();
     }
 
     /// <summary>Clears the ink and puts the thumb back on the first point.</summary>
@@ -72,6 +96,7 @@ public class GuidedDrawing : MaskableGraphic, IPointerDownHandler, IDragHandler,
         placedArc = -1f;
         dragging = false;
         completed = false;
+        wrongTouchUntil = 0f;
         PlaceThumb();
         SetVerticesDirty();
     }
@@ -123,6 +148,16 @@ public class GuidedDrawing : MaskableGraphic, IPointerDownHandler, IDragHandler,
     {
         if (thumb == null || path.Count < 2) return;
 
+        if (kidsGuideStyle && !completed)
+        {
+            float pulse = 1f + Mathf.Sin(Time.unscaledTime * thumbPulseSpeed) * thumbPulseAmount;
+            thumb.localScale = thumbBaseScale * pulse;
+        }
+        else
+        {
+            thumb.localScale = thumbBaseScale;
+        }
+
         // While the child is drawing, the thumb leads ahead along the path.
         // When the child lifts the finger or leaves the path, it comes back
         // to the last drawn point to show where to touch again.
@@ -154,6 +189,8 @@ public class GuidedDrawing : MaskableGraphic, IPointerDownHandler, IDragHandler,
 
         if (ToLocal(e, out Vector2 p) && Vector2.Distance(p, PointAt(progress)) <= startRadius)
             dragging = true;
+        else
+            ShowWrongTouchFeedback();
     }
 
     public void OnDrag(PointerEventData e)
@@ -188,6 +225,7 @@ public class GuidedDrawing : MaskableGraphic, IPointerDownHandler, IDragHandler,
         if (bestDist > tolerance)
         {
             dragging = false;
+            ShowWrongTouchFeedback();
             return;
         }
 
@@ -198,11 +236,12 @@ public class GuidedDrawing : MaskableGraphic, IPointerDownHandler, IDragHandler,
             SetVerticesDirty();
         }
 
-        if (progress >= total - 0.01f)
+        if (total > 0f && progress >= total * completionThreshold)
         {
             progress = total;
             completed = true;
             dragging = false;
+            if (thumb != null) thumb.localScale = thumbBaseScale;
             PlaceThumb();
             SetVerticesDirty();
             Debug.Log("Complete");
@@ -220,7 +259,12 @@ public class GuidedDrawing : MaskableGraphic, IPointerDownHandler, IDragHandler,
     protected override void OnPopulateMesh(VertexHelper vh)
     {
         vh.Clear();
-        if (path.Count < 2 || progress <= 0f) return;
+        if (path.Count < 2) return;
+
+        if (kidsGuideStyle)
+            DrawKidsGuide(vh);
+
+        if (progress <= 0f) return;
 
         // path from first point up to current progress
         List<Vector2> pts = meshPts;
@@ -232,41 +276,78 @@ public class GuidedDrawing : MaskableGraphic, IPointerDownHandler, IDragHandler,
             else { pts.Add(PointAt(progress)); break; }
         }
 
+        Color32 shadow = new Color(0f, 0f, 0f, 0.16f);
         Color32 c = lineColor;
-        float h = thickness * 0.5f;
 
-        // segments
+        // A soft outline keeps the child's ink readable over light artwork.
         for (int i = 1; i < pts.Count; i++)
         {
-            Vector2 a = pts[i - 1], b = pts[i];
-            Vector2 d = b - a;
-            if (d.sqrMagnitude < 1e-6f) continue;
-            d.Normalize();
-            Vector2 n = new Vector2(-d.y, d.x) * h;
-
-            int idx = vh.currentVertCount;
-            vh.AddVert(a - n, c, Vector2.zero);
-            vh.AddVert(a + n, c, Vector2.zero);
-            vh.AddVert(b + n, c, Vector2.zero);
-            vh.AddVert(b - n, c, Vector2.zero);
-            vh.AddTriangle(idx, idx + 1, idx + 2);
-            vh.AddTriangle(idx, idx + 2, idx + 3);
+            AddSegment(vh, pts[i - 1], pts[i], thickness + 7f, shadow);
+            AddSegment(vh, pts[i - 1], pts[i], thickness, c);
         }
 
         // round joints and caps
-        const int seg = 10;
         foreach (Vector2 pt in pts)
         {
-            int center = vh.currentVertCount;
-            vh.AddVert(pt, c, Vector2.zero);
-            for (int k = 0; k < seg; k++)
-            {
-                float ang = k * Mathf.PI * 2f / seg;
-                vh.AddVert(pt + new Vector2(Mathf.Cos(ang), Mathf.Sin(ang)) * h, c, Vector2.zero);
-            }
-            for (int k = 0; k < seg; k++)
-                vh.AddTriangle(center, center + 1 + k, center + 1 + (k + 1) % seg);
+            AddCircle(vh, pt, (thickness + 7f) * 0.5f, shadow);
+            AddCircle(vh, pt, thickness * 0.5f, c);
         }
+    }
+
+    void DrawKidsGuide(VertexHelper vh)
+    {
+        Color32 dots = Time.unscaledTime < wrongTouchUntil ? wrongTouchColor : guideColor;
+        for (float s = 0f; s <= total; s += guideDotSpacing)
+            AddCircle(vh, PointAt(s), guideDotRadius, dots, 8);
+
+        // Large, obvious targets communicate where to start and where to finish.
+        AddCircle(vh, path[0], guideDotRadius * 1.9f, startDotColor, 14);
+        AddCircle(vh, path[path.Count - 1], guideDotRadius * 1.9f, finishDotColor, 14);
+        AddCircle(vh, path[0], guideDotRadius * 0.75f, Color.white, 12);
+        AddCircle(vh, path[path.Count - 1], guideDotRadius * 0.75f, Color.white, 12);
+    }
+
+    void ShowWrongTouchFeedback()
+    {
+        if (!kidsGuideStyle) return;
+        wrongTouchUntil = Time.unscaledTime + wrongTouchFlashDuration;
+        SetVerticesDirty();
+        CancelInvoke(nameof(ClearWrongTouchFeedback));
+        Invoke(nameof(ClearWrongTouchFeedback), wrongTouchFlashDuration);
+    }
+
+    void ClearWrongTouchFeedback()
+    {
+        SetVerticesDirty();
+    }
+
+    static void AddSegment(VertexHelper vh, Vector2 a, Vector2 b, float width, Color32 color)
+    {
+        Vector2 d = b - a;
+        if (d.sqrMagnitude < 1e-6f) return;
+        d.Normalize();
+        Vector2 n = new Vector2(-d.y, d.x) * (width * 0.5f);
+
+        int idx = vh.currentVertCount;
+        vh.AddVert(a - n, color, Vector2.zero);
+        vh.AddVert(a + n, color, Vector2.zero);
+        vh.AddVert(b + n, color, Vector2.zero);
+        vh.AddVert(b - n, color, Vector2.zero);
+        vh.AddTriangle(idx, idx + 1, idx + 2);
+        vh.AddTriangle(idx, idx + 2, idx + 3);
+    }
+
+    static void AddCircle(VertexHelper vh, Vector2 centerPos, float radius, Color32 color, int segments = 10)
+    {
+        int center = vh.currentVertCount;
+        vh.AddVert(centerPos, color, Vector2.zero);
+        for (int i = 0; i < segments; i++)
+        {
+            float angle = i * Mathf.PI * 2f / segments;
+            vh.AddVert(centerPos + new Vector2(Mathf.Cos(angle), Mathf.Sin(angle)) * radius, color, Vector2.zero);
+        }
+        for (int i = 0; i < segments; i++)
+            vh.AddTriangle(center, center + 1 + i, center + 1 + (i + 1) % segments);
     }
 
 #if UNITY_EDITOR
